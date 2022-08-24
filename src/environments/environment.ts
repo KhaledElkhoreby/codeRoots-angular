@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseUrl: 'http://satafood.codesroots.com:3000/api',
+  googleId: 'ChIJ88rv8bI_WBQRkvVBLDeZQUg',
 };
 
 /*
