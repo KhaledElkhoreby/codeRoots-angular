@@ -1,0 +1,33 @@
+<section class="container mt-10">
+  <ul class="carousel gap-x-3">
+    <li *ngFor="let product of products" class="flex flex-col h-[500px] w-[225px]  carousel-item">
+      <figure class="h-[65%]">
+        <img [src]=" baseUrl+product?.data[0]?.cover || product?.data[0]?.restaurants?.cover" alt=""
+          onerror="this.onerror=null;this.src='../../../../assets/default-store-350x350.jpg';"
+          class="w-full h-full object-fill" />
+      </figure>
+      <h2 class="h-[15%] p-2 text-gray-500 text-ellipsis">
+        {{product.title}}
+      </h2>
+      <div class="h-[10%] px-2 text-lg">
+        <h3>
+          جنيه
+          <span class="font-bold">4698.00</span>
+        </h3>
+        <h2 class="flex gap-x-1 text-sm">
+          <span class="text-gray-400 line-through"> جنيه 1000</span>
+          <span class="text-green-600">خصم 20%</span>
+        </h2>
+      </div>
+      <div class="h-[10%] flex justify-between items-end px-2">
+        <div class="badge badge-warning bg-yellow-400 rounded-tl-none">Express</div>
+        <div>
+          <span class="text-yellow-400">
+            <i class="pi pi-star-fill"></i>4.9
+          </span>
+          <span class="text-gray-400">(324)</span>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>

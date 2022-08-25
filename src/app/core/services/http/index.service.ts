@@ -22,4 +22,9 @@ export class IndexService {
     const endPoint = 'Categories/index';
     return this.http.post(`${this._baseUrl}api/${endPoint}`, {});
   }
+
+  getProducts() {
+    const endPoint = 'MobileMainPage/GetHomePage';
+    return this.http.post(`${this._baseUrl}api/${endPoint}`, {});
+  }
 }

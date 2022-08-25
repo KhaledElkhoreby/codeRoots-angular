@@ -16,11 +16,9 @@ export class AdsBannerComponent implements OnInit {
 
   ngOnInit(): void {
     this.http.getMainSlider().subscribe((ads) => {
-      console.log(ads);
       ads.forEach((ad) =>
         ad.AdsSpacesprice.forEach((slide) => this.ads.push(slide.sliders))
       );
-      console.log(this.ads);
     });
   }
 }
