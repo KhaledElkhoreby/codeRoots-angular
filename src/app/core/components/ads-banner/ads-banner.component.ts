@@ -1,12 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { IndexService } from '../../http/index.service';
-import { Observable } from 'rxjs';
-import {
-  AdsInterface,
-  AdsSpacesprice,
-  Slider,
-} from '../../interfaces/ads-interface';
 import { environment } from 'src/environments/environment';
+import { Slider } from '../../interfaces/ads-interface';
+import { IndexService } from '../../services/http/index.service';
 @Component({
   selector: 'app-ads-banner',
   templateUrl: './ads-banner.component.html',
@@ -20,7 +15,7 @@ export class AdsBannerComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.http.getProducts('MobileMainPage/GetMainSliders').subscribe((ads) => {
+    this.http.getMainSlider().subscribe((ads) => {
       console.log(ads);
       ads.forEach((ad) =>
         ad.AdsSpacesprice.forEach((slide) => this.ads.push(slide.sliders))

@@ -1,0 +1,10 @@
+<section class="container">
+  <ul class="gap-x-7 carousel">
+    <li *ngFor="let cat of cats" class="flex flex-col justify-center items-center carousel-item">
+      <figure class="w-32 h-32 rounded-full bg-yellow-400 grid place-content-cente gap-y-2">
+        <img [src]="cat.image" alt="" class="w-full h-full object-contain object-center rounded-full">
+      </figure>
+      <h3>{{cat.title}}</h3>
+    </li>
+  </ul>
+</section>

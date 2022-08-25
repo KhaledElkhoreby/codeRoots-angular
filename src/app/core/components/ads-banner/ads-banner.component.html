@@ -1,8 +1,10 @@
-<p-carousel dir="ltr" [value]="ads" styleClass="custom-carousel" [numVisible]="1" [numScroll]="1" [circular]="false"
-  [autoplayInterval]="3000">
-  <ng-template let-ad pTemplate="item">
-    <figure class="h-[400px]">
-      <img [src]="this.baseUrl+ad.photo" alt="" class="w-full h-full object-fill">
-    </figure>
-  </ng-template>
-</p-carousel>
+<div class="container h-[450px]">
+  <p-carousel *ngIf="ads.length>0" dir="ltr" [value]="ads" styleClass="custom-carousel" [numVisible]="1" [numScroll]="1"
+    [circular]="false" [autoplayInterval]="3000">
+    <ng-template let-ad pTemplate="item">
+      <figure class="h-[400px]">
+        <img [src]="this.baseUrl+ad.photo" alt="" class="w-full h-full object-fill">
+      </figure>
+    </ng-template>
+  </p-carousel>
+</div>

@@ -1,12 +1,14 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavbarComponent } from './components/navbar/navbar.component';
+import { NgModule } from '@angular/core';
+import { AvatarModule } from 'primeng/avatar';
 import { CarouselModule } from 'primeng/carousel';
 import { AdsBannerComponent } from './components/ads-banner/ads-banner.component';
+import { CategoriesComponent } from './components/categories/categories.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
-  declarations: [NavbarComponent, AdsBannerComponent],
-  imports: [CommonModule, CarouselModule],
-  exports: [NavbarComponent, AdsBannerComponent],
+  declarations: [NavbarComponent, AdsBannerComponent, CategoriesComponent],
+  imports: [CommonModule, CarouselModule, AvatarModule],
+  exports: [NavbarComponent, AdsBannerComponent, CategoriesComponent],
 })
 export class CoreModule {}
