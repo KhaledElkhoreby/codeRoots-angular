@@ -23,7 +23,6 @@ export class IndexInterceptor implements HttpInterceptor {
         googleId: environment.googleId,
       },
     });
-    console.log(modifiedReq.headers);
     return next.handle(modifiedReq);
   }
 }

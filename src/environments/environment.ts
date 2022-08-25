@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'http://satafood.codesroots.com:3000/api',
+  baseUrl: 'http://satafood.codesroots.com:3000/',
   googleId: 'ChIJ88rv8bI_WBQRkvVBLDeZQUg',
 };
 
